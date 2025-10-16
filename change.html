@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Hover Image Change</title>
+    <style>
+        #heading2 {
+            display: none;
+        }
+        #image {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row"> 
+        <div class="content"> 
+            <img src="C:\Users\mca3\Pictures\white.jpg" id="image" alt="Main image"><br><br> 
+            <div class="data">
+                <h1 id="heading1">Over mouse here.....</h1> 
+                <h1 id="heading2">Hi hello world...</h1> 
+            </div> 
+        </div> 
+    </div> 
+
+    <script>
+        // Add mouseover and mouseout to the heading1 text
+        const heading = document.getElementById("heading1");
+        const image = document.getElementById("image");
+        const heading2 = document.getElementById("heading2");
+
+        heading.addEventListener("mouseover", changeImage);
+        heading.addEventListener("mouseout", revertImage);
+
+        function changeImage() {
+            image.src = "C:\Users\mca3\Pictures\rose.jpg"; // new image on hover
+            heading.style.display = "none";
+            heading2.style.display = "block";
+        }
+
+        function revertImage() {
+            image.src = "C:\Users\mca3\Pictures\white.jpg"; // original image
+            heading.style.display = "block";
+            heading2.style.display = "none";
+        }
+    </script>
+</body>
+</html>
