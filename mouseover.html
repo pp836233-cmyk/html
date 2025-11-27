@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Image</title>
+</head>
+<body>
+    <center>
+        <div class="row">
+            <div class="content" id="content">
+                <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/158729/kodiaq-exterior-right-front-three-quarter-13.jpeg?isig=0&q=80" id="image" alt="Car Image"> 
+                <br><br>
+                <div class="data">
+                    <h1 id="heading1">Skoda Kodiaq</h1>
+                    <h1 id="heading2">Land Rover Defender</h1>
+                </div>
+            </div>
+        </div>
+    </center>
+
+    <script>
+        const content = document.getElementById("content");
+        const image = document.getElementById("image");
+        const heading1 = document.getElementById("heading1");
+        const heading2 = document.getElementById("heading2");
+
+        content.addEventListener("mouseover", change1);
+        content.addEventListener("mouseout", change2);    
+
+        function change1() {
+            // Change image on hover
+            image.src = "https://imgd.aeplcdn.com/664x374/n/cw/ec/55215/defender-exterior-right-front-three-quarter-7.jpeg?isig=0&q=80";
+            heading1.style.display = "none";
+            heading2.style.display = "block";
+        }
+
+        function change2() {
+            // Revert image back when mouse leaves
+            image.src = "https://imgd.aeplcdn.com/664x374/n/cw/ec/158729/kodiaq-exterior-right-front-three-quarter-13.jpeg?isig=0&q=80";
+            heading1.style.display = "block";
+            heading2.style.display = "none";
+        }
+    </script>
+</body>
+</html>
+
